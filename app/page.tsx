@@ -12,9 +12,7 @@ export default async function Home() {
       <Navbar />
       <Search />
       <section className="grid grid-cols-4 gap-10 px-8 place-items-center w-full pt-8">
-        {data.map((item: AnimeProp, index: number) => (
-          <Card key={item.id} anime={item} index={index} />
-        ))}
+        {data}
       </section>
       <Loader />
     </div>
