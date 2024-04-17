@@ -1,15 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { fetchAnime } from "@/app/action";
-import Card, { AnimeProp } from "./Card";
+// import Card, { AnimeProp } from "./Card";
 
 let page = 1;
 
 const Search = () => {
-  const [value, setValue] = useState("");
+  // const [value, setValue] = useState("");
 
-  const data = fetchAnime(page);
+  // const data = fetchAnime(page);
 
   // console.log(
   //   data.filter((anime: any) => anime.name.toLowerCase().includes("on"))
@@ -21,7 +21,7 @@ const Search = () => {
         type="text"
         placeholder="Search"
         name="search"
-        onChange={(e) => setValue(e.target.value)}
+        // onChange={(e) => setValue(e.target.value)}
         className="py-2 px-[12rem] text-center border-black border-[1px] shadow-lg rounded-full"
       />
       {/* <div>
