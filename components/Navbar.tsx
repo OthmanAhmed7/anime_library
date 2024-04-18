@@ -19,7 +19,7 @@ const Navbar = async () => {
       </h1>
 
       <div className="flex gap-4 items-center">
-        {session.isLoggedIn && (
+        {/* {session.isLoggedIn && (
           <Link href="/favorites">
             <FaHeart className="w-5 h-5" />
           </Link>
@@ -28,7 +28,7 @@ const Navbar = async () => {
           <Link href="/wish">
             <IoIosList className="w-6 h-6" />
           </Link>
-        )}
+        )} */}
         {!session.isLoggedIn && (
           <Link href="/login">
             <button className="py-1 px-4 bg-black border-2 border-black text-white rounded-md hover:bg-white hover:text-black hover:border-black hover:border-[2px] hover:font-semibold">

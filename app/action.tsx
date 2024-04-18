@@ -18,14 +18,6 @@ export const fetchAnime = async (page: number) => {
   ));
 };
 
-export const fetch_Anime = async (page: number) => {
-  const response = await fetch(
-    `https://shikimori.one/api/animes?page=${page}&limit=8&order=popularity`
-  );
-  const data = await response.json();
-  return data;
-};
-
 export const getSession = async () => {
   const session = await getIronSession<SessionData>(cookies(), sessionOptions);
 
@@ -111,5 +103,5 @@ export const login = async (
 export const logout = async () => {
   const session = await getSession();
   session.destroy();
-  redirect("/");
+  redirect("/login");
 };

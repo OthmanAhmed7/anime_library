@@ -34,7 +34,7 @@ const Card = ({ anime, index }: Prop) => {
       initial="hidden"
       animate="visible"
       transition={{ delay: index * 0.25, ease: "easeInOut", duration: 0.5 }}
-      className="max-w-[167px]"
+      className="max-w-[167px] hover:scale-110"
     >
       <div className="shadow-xl rounded-md p-2 border-[1px]">
         <Image
@@ -63,14 +63,18 @@ const Card = ({ anime, index }: Prop) => {
           </p>
         </div>
 
-        <div className="flex justify-between items-center mt-1 gap-1">
-          <button className="px-8 bg-black text-white rounded-md">
-            To Watch
-          </button>
-          <button>
-            <FaHeart />
-          </button>
-        </div>
+        {/* <div className="flex justify-between items-center mt-1 gap-1">
+          <form action="toWatch">
+            <button className="px-8 bg-black text-white rounded-md">
+              To Watch
+            </button>
+          </form>
+          <form action="favorites">
+            <button>
+              <FaHeart />
+            </button>
+          </form>
+        </div> */}
       </div>
     </MotionSection>
   );

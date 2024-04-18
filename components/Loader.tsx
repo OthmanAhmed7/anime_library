@@ -24,7 +24,7 @@ function Loader() {
 
   return (
     <>
-      <section className="grid grid-cols-4 gap-10 px-8 place-items-center w-full pt-8">
+      <section className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 px-8 place-items-center w-full pt-8">
         {data}
       </section>
       <section className="flex justify-center items-center w-full mt-20">
