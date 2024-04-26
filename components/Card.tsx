@@ -2,25 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { GoStack } from "react-icons/go";
 import { CiStar } from "react-icons/ci";
-import { FaHeart } from "react-icons/fa";
 import { MotionSection } from "./MotionSection";
-
-export interface AnimeProp {
-  id: string;
-  name: string;
-  image: {
-    original: string;
-  };
-  kind: string;
-  episodes: number;
-  episodes_aired: number;
-  score: string;
-}
-
-interface Prop {
-  anime: AnimeProp;
-  index: number;
-}
+import { Prop } from "@/app/lib";
 
 const variants = {
   hidden: { opacity: 0 },
@@ -62,19 +45,6 @@ const Card = ({ anime, index }: Prop) => {
             <CiStar className="w-5 h-5" /> {anime.score}
           </p>
         </div>
-
-        {/* <div className="flex justify-between items-center mt-1 gap-1">
-          <form action="toWatch">
-            <button className="px-8 bg-black text-white rounded-md">
-              To Watch
-            </button>
-          </form>
-          <form action="favorites">
-            <button>
-              <FaHeart />
-            </button>
-          </form>
-        </div> */}
       </div>
     </MotionSection>
   );

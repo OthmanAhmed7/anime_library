@@ -1,7 +1,7 @@
 "use server";
 
-import Card, { AnimeProp } from "@/components/Card";
-import { sessionOptions, SessionData, defaultSession } from "./lib";
+import Card from "@/components/Card";
+import { sessionOptions, SessionData, defaultSession, AnimeProp } from "./lib";
 import { getIronSession } from "iron-session";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
@@ -93,6 +93,7 @@ export const login = async (
   }
 
   session.username = uniqueName.name;
+  session.userId = uniqueName.id;
   session.isLoggedIn = true;
 
   await session.save();
